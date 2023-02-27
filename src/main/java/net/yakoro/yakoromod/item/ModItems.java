@@ -1,13 +1,16 @@
 package net.yakoro.yakoromod.item;
 
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.yakoro.yakoromod.YakoroMod;
 
 public class ModItems {
 
-
+    public static final Item RAW_CORDIERITE = registerItem("raw_cordierite",
+            new Item(new FabricItemSettings().group(ItemGroup.MISC)));
 
 
 
