@@ -15,8 +15,8 @@ import net.yakoro.yakoromod.item.ModItemGroup;
 import net.yakoro.yakoromod.item.ModItems;
 
 public class ModBlocks {
-    //public static final Block CORDIERITE_BLOCK = registerBlock("cordierite_block",
-            //new Block(FabricBlockSettings.of(Material.AMETHYST).strength(4f).requiresTool()), ModItemGroup.C);
+    public static final Block CORDIERITE_BLOCK = registerBlock("cordierite_block",
+            new Block(FabricBlockSettings.of(Material.AMETHYST).strength(4f).requiresTool()), ModItemGroup.CORDIERITE);
 
     private static Block registerBlock(String name, Block block, ItemGroup tab){
         registerBlockItem(name, block, tab);
