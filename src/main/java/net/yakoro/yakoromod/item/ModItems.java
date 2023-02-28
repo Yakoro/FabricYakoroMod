@@ -9,10 +9,10 @@ import net.yakoro.yakoromod.YakoroMod;
 
 public class ModItems {
 
-    public static final Item RAW_CORDIERITE = registerItem("raw_cordierite",
+    public static final Item RAW_CORDIERITE = registerItem("raw_cordierite.json",
             new Item(new FabricItemSettings().group(ItemGroup.MISC)));
-
-
+    public static final Item CORDIERITE = registerItem("cordierite.json",
+            new Item(new FabricItemSettings().group(ItemGroup.MISC)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(YakoroMod.MOD_ID, name), item);
