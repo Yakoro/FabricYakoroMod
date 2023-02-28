@@ -17,6 +17,10 @@ import net.yakoro.yakoromod.item.ModItems;
 public class ModBlocks {
     public static final Block CORDIERITE_BLOCK = registerBlock("cordierite_block",
             new Block(FabricBlockSettings.of(Material.AMETHYST).strength(4f).requiresTool()), ModItemGroup.CORDIERITE);
+    public static final Block CORDIERITE_ORE = registerBlock("cordierite_ore",
+            new Block(FabricBlockSettings.of(Material.AMETHYST).strength(4f).requiresTool()), ModItemGroup.CORDIERITE);
+    public static final Block DEEPSLATE_CORDIERITE_ORE = registerBlock("deepslate_cordierite_ore",
+            new Block(FabricBlockSettings.of(Material.AMETHYST).strength(4f).requiresTool()), ModItemGroup.CORDIERITE);
 
     private static Block registerBlock(String name, Block block, ItemGroup tab){
         registerBlockItem(name, block, tab);
