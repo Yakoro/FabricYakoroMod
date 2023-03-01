@@ -4,27 +4,25 @@ import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.yakoro.yakoromod.item.ModItems;
 
-public class CordieriteToolMaterial implements ToolMaterial {
+public class CordieriteToolMaterialPickaxe implements ToolMaterial {
 
-    public static final CordieriteToolMaterial INSTANCE = new CordieriteToolMaterial();
+    public static final CordieriteToolMaterialPickaxe INSTANCE2 = new CordieriteToolMaterialPickaxe();
     @Override
     public int getDurability() {
         return 2000;
     }
 
     @Override
-    public float getMiningSpeedMultiplier() {
-        return 0;
-    }
+    public float getMiningSpeedMultiplier() { return 30; }
 
     @Override
     public float getAttackDamage() {
-        return 20;
+        return 5;
     }
 
     @Override
     public int getMiningLevel() {
-        return 0;
+        return 100;
     }
 
     @Override

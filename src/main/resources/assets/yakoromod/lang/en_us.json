@@ -6,6 +6,7 @@
   "block.yakoromod.cordierite_block": "Block of Cordierite",
   "item.yakoromod.cordierite_sword": "Cordierite sword",
   "item.yakoromod.healing_staff": "Healing Staff",
+  "item.yakoromod.cordierite_pickaxe":  "Cordierite pickaxe",
 
   "itemGroup.yakoromod.cordierite": "Cordierite elements"
 }

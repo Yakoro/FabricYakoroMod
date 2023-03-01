@@ -22,7 +22,7 @@ public class HealingStaffItem extends Item {
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
         if (!user.world.isClient() && hand == Hand.MAIN_HAND) {
             if(!entity.isPlayer()) {
-                entity.takeKnockback(4, user.getX() - entity.getX(), user.getZ() - entity.getZ());
+                entity.takeKnockback(8, user.getX() - entity.getX(), user.getZ() - entity.getZ());
             }
             if(entity.isPlayer()) {
                 entity.heal(6);
