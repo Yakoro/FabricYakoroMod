@@ -8,7 +8,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.yakoro.yakoromod.YakoroMod;
 import net.yakoro.yakoromod.item.toolmaterial.CordieriteToolMaterial;
-import net.yakoro.yakoromod.item.toolmaterial.custom.HealingStaffItem;
+import net.yakoro.yakoromod.item.custom.HealingStaffItem;
 
 public class ModItems {
 

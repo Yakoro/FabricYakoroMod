@@ -1,4 +1,4 @@
-package net.yakoro.yakoromod.item.toolmaterial.custom;
+package net.yakoro.yakoromod.item.custom;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -21,7 +21,13 @@ public class HealingStaffItem extends Item {
     @Override
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
         if (!user.world.isClient() && hand == Hand.MAIN_HAND) {
-            entity.takeKnockback(4, user.getX()-entity.getX(), user.getZ()-entity.getZ());
+            if(!entity.isPlayer()) {
+                entity.takeKnockback(4, user.getX() - entity.getX(), user.getZ() - entity.getZ());
+            }
+            if(entity.isPlayer()) {
+                entity.heal(6);
+                user.getItemCooldownManager().set(this, 20);
+            }
         }
         return super.useOnEntity(stack, user, entity, hand);
     }
