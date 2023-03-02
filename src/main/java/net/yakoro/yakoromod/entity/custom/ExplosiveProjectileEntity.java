@@ -14,16 +14,24 @@ import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
+import net.yakoro.yakoromod.item.ModItems;
 
 public class ExplosiveProjectileEntity extends ThrownItemEntity {
+
     public ExplosiveProjectileEntity(World world, LivingEntity user){
         super(EntityType.SNOWBALL, user, world);
+
+        //ExplosiveProjectileEntity explosiveProjectileEntity = new ExplosiveProjectileEntity(world, user);
+        //explosiveProjectileEntity.setItem(ModItems.URANIUM_BALL.getDefaultStack());
+
     }
 
     @Override
     protected void onCollision(HitResult hitResult) {
         super.onCollision(hitResult);
         world.createExplosion(this, hitResult.getPos().getX(), hitResult.getPos().getY(), hitResult.getPos().getZ(), 5, Explosion.DestructionType.DESTROY);
+
+
 
         if (!this.world.isClient) {
             this.world.sendEntityStatus(this, EntityStatuses.PLAY_DEATH_SOUND_OR_ADD_PROJECTILE_HIT_PARTICLES);
