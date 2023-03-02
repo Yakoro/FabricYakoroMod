@@ -9,6 +9,7 @@ import net.minecraft.entity.mob.BlazeEntity;
 import net.minecraft.entity.projectile.thrown.SnowballEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.SnowballItem;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.world.World;
@@ -35,3 +36,4 @@ public class ExplosiveProjectileEntity extends ThrownItemEntity {
         return null;
     }
 }
+
