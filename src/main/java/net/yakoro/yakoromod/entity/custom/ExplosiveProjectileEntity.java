@@ -21,9 +21,6 @@ public class ExplosiveProjectileEntity extends ThrownItemEntity {
     public ExplosiveProjectileEntity(World world, LivingEntity user){
         super(EntityType.SNOWBALL, user, world);
 
-        //ExplosiveProjectileEntity explosiveProjectileEntity = new ExplosiveProjectileEntity(world, user);
-        //explosiveProjectileEntity.setItem(ModItems.URANIUM_BALL.getDefaultStack());
-
     }
 
     @Override

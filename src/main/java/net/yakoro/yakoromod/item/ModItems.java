@@ -1,6 +1,9 @@
 package net.yakoro.yakoromod.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.impl.object.builder.FabricEntityType;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.PickaxeItem;
@@ -8,6 +11,7 @@ import net.minecraft.item.SwordItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.yakoro.yakoromod.YakoroMod;
+import net.yakoro.yakoromod.entity.custom.ExplosiveProjectileEntity;
 import net.yakoro.yakoromod.item.custom.ExplosiveGunItem;
 import net.yakoro.yakoromod.item.toolmaterial.CordieriteToolMaterialPickaxe;
 import net.yakoro.yakoromod.item.toolmaterial.CordieriteToolMaterialSword;
@@ -42,5 +46,7 @@ public class ModItems {
         YakoroMod.LOGGER.debug("Registering Mod Items for " + YakoroMod.MOD_ID);
     }
 
+    //public static final Entity EXPLOSIVE_PROJECTILE = registerItem("explosive_projectile",
+            //new ExplosiveProjectileEntity(new FabricEntityType<>));
 
 }

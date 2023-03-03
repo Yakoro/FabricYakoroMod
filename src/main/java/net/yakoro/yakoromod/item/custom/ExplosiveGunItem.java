@@ -11,6 +11,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.yakoro.yakoromod.entity.custom.ExplosiveProjectileEntity;
+import net.yakoro.yakoromod.item.ModItems;
 
 public class ExplosiveGunItem extends Item {
 
@@ -23,9 +24,12 @@ public class ExplosiveGunItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_DRAGON_FIREBALL_EXPLODE, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+
+
+
         if (!world.isClient) {
             ExplosiveProjectileEntity explosiveProjectileEntity = new ExplosiveProjectileEntity(world, user);
-            explosiveProjectileEntity.setItem(itemStack);
+            explosiveProjectileEntity.setItem(ModItems.URANIUM_BALL.getDefaultStack());
             explosiveProjectileEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 1.5f, 1.0f);
             world.spawnEntity(explosiveProjectileEntity);
         }

@@ -7,6 +7,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
@@ -36,30 +37,18 @@ public class HealingStaffItem extends Item {
         }
         return super.useOnEntity(stack, user, entity, hand);
     }
-
-    /*public ActionResult useOnBlock(ItemStack stack, PlayerEntity user, Block block, Hand hand) {
-        if (!user.world.isClient() && hand == Hand.MAIN_HAND) {
-            user.takeKnockback(4, user.getX() - getBlockPosition(block, world) .);
+/*
+    @Override
+    public ActionResult useOnBlock(ItemUsageContext context) {
+        if (!context.getWorld().isClient() && context.getHand() == Hand.MAIN_HAND) {
+            //context.getPlayer().takeKnockback(4, context.getPlayer().getX() - context.getBlockPos().getX(), context.getPlayer().getZ() - context.getBlockPos().getZ());
+            context.getPlayer().setNoGravity(true);
+            context.getPlayer().setVelocity(context.getPlayer().getVelocity().add(0, 0.5, 0));
+            context.getPlayer().jump();
+            //context.getPlayer().setNoGravity(false);
+            context.getPlayer().sendMessage(Text.literal("Fonctionne !!"));
         }
-        return ActionResult.PASS;
-    }
-
-    private BlockPos getBlockPosition(Block block, World world) {
-        BlockPos pos = null;
-        if (world != null) {
-            for (int x = -300; x < 300; x++) {
-                for (int y = 0; y < 256; y++) {
-                    for (int z = -300; z < 300; z++) {
-                        BlockPos blockPos = new BlockPos(x, y, z);
-                        if (world.getBlockState(blockPos).getBlock() == block) {
-                            pos = blockPos;
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-        return pos;
+        return super.useOnBlock(context);
     }*/
 
 }
