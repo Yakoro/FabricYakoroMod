@@ -15,6 +15,7 @@
   "block.yakoromod.uranium_block": "Block of Uranium",
   "item.yakoromod.raw_uranium": "Raw Uranium",
   "item.yakoromod.uranium": "Uranium",
+  "block.yakoromod.heal_block": "Healing Block",
 
   "itemGroup.yakoromod.cordierite": "Cordierite elements"
 }
