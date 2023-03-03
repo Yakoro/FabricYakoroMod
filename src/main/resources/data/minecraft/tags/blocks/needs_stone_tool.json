@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-
+    "yakoromod:uranium_block",
+    "yakoromod:uranium_ore",
+    "yakoromod:deepslate_uranium_ore"
   ]
 }

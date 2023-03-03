@@ -37,19 +37,19 @@ public class HealingStaffItem extends Item {
         }
         return super.useOnEntity(stack, user, entity, hand);
     }
-/*
+
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
         if (!context.getWorld().isClient() && context.getHand() == Hand.MAIN_HAND) {
             //context.getPlayer().takeKnockback(4, context.getPlayer().getX() - context.getBlockPos().getX(), context.getPlayer().getZ() - context.getBlockPos().getZ());
-            context.getPlayer().setNoGravity(true);
-            context.getPlayer().setVelocity(context.getPlayer().getVelocity().add(0, 0.5, 0));
-            context.getPlayer().jump();
-            //context.getPlayer().setNoGravity(false);
+            //context.getPlayer().setNoGravity(true);
+            //context.getPlayer().setVelocity(context.getPlayer().getVelocity().add(0, 0.5, 0));
+            //context.getPlayer().jump();
+            context.getPlayer().setNoGravity(false);
             context.getPlayer().sendMessage(Text.literal("Fonctionne !!"));
         }
         return super.useOnBlock(context);
-    }*/
+    }
 
 }
 

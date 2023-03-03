@@ -8,7 +8,13 @@
   "item.yakoromod.healing_staff": "Healing Staff",
   "item.yakoromod.cordierite_pickaxe":  "Cordierite pickaxe",
   "item.yakoromod.explosive_gun": "Explosive gun",
+
   "item.yakoromod.uranium_ball": "Uranium ball",
+  "block.yakoromod.uranium_ore": "Uranium Ore",
+  "block.yakoromod.deepslate_uranium_ore": "Deepslate Uranium Ore",
+  "block.yakoromod.uranium_block": "Block of Uranium",
+  "item.yakoromod.raw_uranium": "Raw Uranium",
+  "item.yakoromod.uranium": "Uranium",
 
   "itemGroup.yakoromod.cordierite": "Cordierite elements"
 }

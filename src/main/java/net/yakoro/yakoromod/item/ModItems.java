@@ -39,6 +39,12 @@ public class ModItems {
     public static final Item URANIUM_BALL = registerItem("uranium_ball",
             new Item(new FabricItemSettings().group(ItemGroup.MISC).group(ModItemGroup.CORDIERITE)));
 
+    public static final Item RAW_URANIUM = registerItem("raw_uranium",
+            new Item(new FabricItemSettings().group(ItemGroup.MISC).group(ModItemGroup.CORDIERITE)));
+    public static final Item URANIUM = registerItem("uranium",
+            new Item(new FabricItemSettings().group(ItemGroup.MISC).group(ModItemGroup.CORDIERITE)));
+
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(YakoroMod.MOD_ID, name), item);
     }

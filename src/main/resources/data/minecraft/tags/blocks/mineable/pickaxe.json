@@ -3,6 +3,10 @@
   "values": [
     "yakoromod:cordierite_block",
     "yakoromod:cordierite_ore",
-    "yakoromod:deepslate_cordierite_ore"
+    "yakoromod:deepslate_cordierite_ore",
+
+    "yakoromod:uranium_block",
+    "yakoromod:uranium_ore",
+    "yakoromod:deepslate_uranium_ore"
   ]
 }

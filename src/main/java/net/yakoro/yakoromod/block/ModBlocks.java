@@ -26,6 +26,16 @@ public class ModBlocks {
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
             UniformIntProvider.create(1,50)), ModItemGroup.CORDIERITE);
 
+    public static final Block URANIUM_BLOCK = registerBlock("uranium_block",
+            new Block(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()), ModItemGroup.CORDIERITE);
+    public static final Block URANIUM_ORE = registerBlock("uranium_ore",
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
+                    UniformIntProvider.create(5,10)), ModItemGroup.CORDIERITE);
+    public static final Block DEEPSLATE_URANIUM_ORE = registerBlock("deepslate_uranium_ore",
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
+                    UniformIntProvider.create(5,10)), ModItemGroup.CORDIERITE);
+
+
     private static Block registerBlock(String name, Block block, ItemGroup tab){
         registerBlockItem(name, block, tab);
         return Registry.register(Registry.BLOCK, new Identifier(YakoroMod.MOD_ID, name), block);
