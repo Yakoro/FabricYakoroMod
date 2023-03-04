@@ -4,12 +4,13 @@
   "block.yakoromod.cordierite_ore": "Cordierite Ore",
   "block.yakoromod.deepslate_cordierite_ore": "Deepslate Cordierite Ore",
   "block.yakoromod.cordierite_block": "Block of Cordierite",
-  "item.yakoromod.cordierite_sword": "Cordierite sword",
+  "item.yakoromod.cordierite_sword": "Cordierite Sword",
   "item.yakoromod.healing_staff": "Healing Staff",
-  "item.yakoromod.cordierite_pickaxe":  "Cordierite pickaxe",
-  "item.yakoromod.explosive_gun": "Explosive gun",
+  "item.yakoromod.cordierite_pickaxe": "Cordierite Pickaxe",
+  "item.yakoromod.explosive_gun": "Explosive Gun",
+  "block.yakoromod.cordierite_lamp": "Cordierite Lamp",
 
-  "item.yakoromod.uranium_ball": "Uranium ball",
+  "item.yakoromod.uranium_ball": "Uranium Ball",
   "block.yakoromod.uranium_ore": "Uranium Ore",
   "block.yakoromod.deepslate_uranium_ore": "Deepslate Uranium Ore",
   "block.yakoromod.uranium_block": "Block of Uranium",
@@ -17,5 +18,5 @@
   "item.yakoromod.uranium": "Uranium",
   "block.yakoromod.heal_block": "Healing Block",
 
-  "itemGroup.yakoromod.cordierite": "Cordierite elements"
+  "itemGroup.yakoromod.cordierite": "Cordierite Elements"
 }

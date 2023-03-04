@@ -38,7 +38,7 @@ public class HealingStaffItem extends Item {
         return super.useOnEntity(stack, user, entity, hand);
     }
 
-    @Override
+    /*@Override
     public ActionResult useOnBlock(ItemUsageContext context) {
         if (!context.getWorld().isClient() && context.getHand() == Hand.MAIN_HAND) {
             //context.getPlayer().takeKnockback(4, context.getPlayer().getX() - context.getBlockPos().getX(), context.getPlayer().getZ() - context.getBlockPos().getZ());
@@ -49,7 +49,7 @@ public class HealingStaffItem extends Item {
             context.getPlayer().sendMessage(Text.literal("Fonctionne !!"));
         }
         return super.useOnBlock(context);
-    }
+    }*/
 
 }
 

@@ -13,11 +13,11 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.yakoro.yakoromod.YakoroMod;
 
 import net.minecraft.util.registry.Registry;
+import net.yakoro.yakoromod.block.custom.CordieriteLampBlock;
 import net.yakoro.yakoromod.block.custom.HealBlock;
 import net.yakoro.yakoromod.block.custom.UraniumBlock;
 import net.yakoro.yakoromod.block.custom.UraniumOreBlock;
 import net.yakoro.yakoromod.item.ModItemGroup;
-import net.yakoro.yakoromod.item.ModItems;
 
 public class ModBlocks {
     public static final Block CORDIERITE_BLOCK = registerBlock("cordierite_block",
@@ -40,6 +40,9 @@ public class ModBlocks {
 
     public static final Block HEAL_BLOCK = registerBlock("heal_block",
             new HealBlock(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()), ModItemGroup.CORDIERITE);
+
+    public static final Block CORDIERITE_LAMP = registerBlock("cordierite_lamp",
+            new CordieriteLampBlock(FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(state -> state.get(CordieriteLampBlock.LIT) ? 15 : 0).strength(4f).requiresTool()), ModItemGroup.CORDIERITE);
 
 
     private static Block registerBlock(String name, Block block, ItemGroup tab){

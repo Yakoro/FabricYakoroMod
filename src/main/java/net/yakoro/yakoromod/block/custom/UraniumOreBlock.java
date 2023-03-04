@@ -34,7 +34,6 @@ public class UraniumOreBlock extends OreBlock {
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER,200, 8));
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER,200,8));
         }
-
     }
 
     @Override
