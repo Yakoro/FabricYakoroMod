@@ -49,7 +49,7 @@ public class ModItems {
             new AliasedBlockItem(ModBlocks.HEARTBEETROOTS_CROP, new FabricItemSettings().group(ItemGroup.MISC).group(ModItemGroup.CORDIERITE)));
 
     public static final Item HEARTBEETROOTS = registerItem("heartbeetroots",
-            new Item(new FabricItemSettings().group(ItemGroup.MISC).group(ModItemGroup.CORDIERITE).food(new FoodComponent.Builder().hunger(4).saturationModifier(4f).statusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 10, -10) , 1.0f).build())));
+            new Item(new FabricItemSettings().group(ItemGroup.MISC).group(ModItemGroup.CORDIERITE).food(new FoodComponent.Builder().hunger(2).saturationModifier(4f).statusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 1, 1) , 1.0f).build())));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(YakoroMod.MOD_ID, name), item);

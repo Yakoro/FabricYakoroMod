@@ -10,7 +10,7 @@ import net.yakoro.yakoromod.item.ModItems;
 
 public class HeartBeetrootsCropBlock extends CropBlock {
 
-    public static final IntProperty AGE = IntProperty.of("age", 0, 3);
+    public static final IntProperty AGE = IntProperty.of("age", 0, 6);
 
     public HeartBeetrootsCropBlock(Settings settings) {
         super(settings);
@@ -23,7 +23,7 @@ public class HeartBeetrootsCropBlock extends CropBlock {
 
     @Override
     public int getMaxAge() {
-        return 3;
+        return 6;
     }
 
     @Override
