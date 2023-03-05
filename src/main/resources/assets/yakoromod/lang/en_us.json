@@ -18,5 +18,9 @@
   "item.yakoromod.uranium": "Uranium",
   "block.yakoromod.heal_block": "Healing Block",
 
+  "item.yakoromod.heartbeetroots": "Heart Beetroots",
+  "item.yakoromod.heartbeetroots_seeds": "Heart Beetroots Seeds",
+  "block.yakoromod.heartbeetroots_crop": "Heart Beetroots Crop",
+
   "itemGroup.yakoromod.cordierite": "Cordierite Elements"
 }

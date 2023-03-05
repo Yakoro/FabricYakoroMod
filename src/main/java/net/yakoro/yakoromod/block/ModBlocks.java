@@ -3,6 +3,7 @@ package net.yakoro.yakoromod.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.block.OreBlock;
 import net.minecraft.item.BlockItem;
@@ -13,10 +14,7 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.yakoro.yakoromod.YakoroMod;
 
 import net.minecraft.util.registry.Registry;
-import net.yakoro.yakoromod.block.custom.CordieriteLampBlock;
-import net.yakoro.yakoromod.block.custom.HealBlock;
-import net.yakoro.yakoromod.block.custom.UraniumBlock;
-import net.yakoro.yakoromod.block.custom.UraniumOreBlock;
+import net.yakoro.yakoromod.block.custom.*;
 import net.yakoro.yakoromod.item.ModItemGroup;
 
 public class ModBlocks {
@@ -44,7 +42,12 @@ public class ModBlocks {
     public static final Block CORDIERITE_LAMP = registerBlock("cordierite_lamp",
             new CordieriteLampBlock(FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(state -> state.get(CordieriteLampBlock.LIT) ? 15 : 0).strength(4f).requiresTool()), ModItemGroup.CORDIERITE);
 
+    public static final Block HEARTBEETROOTS_CROP = registerBlockWithoutItem("heartbeetroots_crop",
+            new HeartBeetrootsCropBlock(FabricBlockSettings.copy(Blocks.WHEAT)));
 
+    private static Block registerBlockWithoutItem(String name, Block block){
+        return Registry.register(Registry.BLOCK, new Identifier(YakoroMod.MOD_ID, name), block);
+    }
     private static Block registerBlock(String name, Block block, ItemGroup tab){
         registerBlockItem(name, block, tab);
         return Registry.register(Registry.BLOCK, new Identifier(YakoroMod.MOD_ID, name), block);
