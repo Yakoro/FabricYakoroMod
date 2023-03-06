@@ -3,6 +3,7 @@ package net.yakoro.yakoromod;
 import net.fabricmc.api.ModInitializer;
 import net.yakoro.yakoromod.block.ModBlocks;
 import net.yakoro.yakoromod.item.ModItems;
+import net.yakoro.yakoromod.villager.ModVillagers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 public class YakoroMod implements ModInitializer {
@@ -14,6 +15,9 @@ public class YakoroMod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+        ModVillagers.registerVillagers();
+		ModVillagers.registerTrades();
 
 	}
 }
