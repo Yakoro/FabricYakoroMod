@@ -41,8 +41,23 @@ public class ModVillagers {
         TradeOfferHelper.registerVillagerOffers(NURSE, 1,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
-                            new ItemStack(Items.EMERALD, 20),
+                            new ItemStack(Items.EMERALD, 4),
+                            new ItemStack(ModItems.HEARTBEETROOTS, 2), 15, 1, 0.02f
+                    )));
+                });
+        TradeOfferHelper.registerVillagerOffers(NURSE, 2,
+                factories -> {
+                    factories.add(((entity, random) -> new TradeOffer(
+                            new ItemStack(Items.EMERALD, 40),
                             new ItemStack(ModItems.HEARTBEETROOTS_SEEDS, 1), 1, 10, 0.02f
+                    )));
+                });
+        TradeOfferHelper.registerVillagerOffers(NURSE, 3,
+                factories -> {
+                    factories.add(((entity, random) -> new TradeOffer(
+                            new ItemStack(Items.EMERALD, 64),
+                            new ItemStack(Items.EMERALD, 64),
+                            new ItemStack(ModItems.HEALING_STAFF, 1), 1, 15, 0.02f
                     )));
                 });
     }
