@@ -2,6 +2,7 @@ package net.yakoro.yakoromod;
 
 import net.fabricmc.api.ModInitializer;
 import net.yakoro.yakoromod.block.ModBlocks;
+import net.yakoro.yakoromod.fluid.ModFluids;
 import net.yakoro.yakoromod.item.ModItems;
 import net.yakoro.yakoromod.villager.ModVillagers;
 import net.yakoro.yakoromod.world.feature.ModConfiguredFeatures;
@@ -23,5 +24,6 @@ public class YakoroMod implements ModInitializer {
 		ModVillagers.registerTrades();
 		ModOreGeneration.generateOres();
 
+		ModFluids.register();
 	}
 }
