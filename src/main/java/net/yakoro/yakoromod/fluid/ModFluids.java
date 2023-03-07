@@ -20,6 +20,12 @@ public class ModFluids {
     public static Block BEER_BLOCK;
     public static Item BEER_BUCKET;
 
+
+    public static FlowableFluid STILL_ACID;
+    public static FlowableFluid FLOWING_ACID;
+    public static Block ACID_BLOCK;
+    public static Item ACID_BUCKET;
+
     public static void register() {
         STILL_BEER = Registry.register(Registry.FLUID,
                 new Identifier(YakoroMod.MOD_ID, "beer"), new BeerFluid.Still());
@@ -27,8 +33,22 @@ public class ModFluids {
                 new Identifier(YakoroMod.MOD_ID, "flowing_beer"), new BeerFluid.Flowing());
 
         BEER_BLOCK = Registry.register(Registry.BLOCK, new Identifier(YakoroMod.MOD_ID, "beer_block"),
-                new FluidBlock(ModFluids.STILL_BEER, FabricBlockSettings.copyOf(Blocks.WATER)){ });
+                new FluidBlock(ModFluids.STILL_BEER, FabricBlockSettings.copyOf(Blocks.WATER)) {
+                });
         BEER_BUCKET = Registry.register(Registry.ITEM, new Identifier(YakoroMod.MOD_ID, "beer_bucket"),
                 new BucketItem(ModFluids.STILL_BEER, new FabricItemSettings().group(ModItemGroup.CORDIERITE).recipeRemainder(Items.BUCKET).maxCount(1)));
+
+
+        STILL_ACID = Registry.register(Registry.FLUID,
+                new Identifier(YakoroMod.MOD_ID, "acid"), new AcidFluid.Still());
+        FLOWING_ACID = Registry.register(Registry.FLUID,
+                new Identifier(YakoroMod.MOD_ID, "flowing_acid"), new AcidFluid.Flowing());
+
+        ACID_BLOCK = Registry.register(Registry.BLOCK, new Identifier(YakoroMod.MOD_ID, "acid_block"),
+                new FluidBlock(ModFluids.STILL_ACID, FabricBlockSettings.copyOf(Blocks.WATER)) {
+                });
+        ACID_BUCKET = Registry.register(Registry.ITEM, new Identifier(YakoroMod.MOD_ID, "acid_bucket"),
+                new BucketItem(ModFluids.STILL_ACID, new FabricItemSettings().group(ModItemGroup.CORDIERITE).recipeRemainder(Items.BUCKET).maxCount(1)));
     }
 }
+
