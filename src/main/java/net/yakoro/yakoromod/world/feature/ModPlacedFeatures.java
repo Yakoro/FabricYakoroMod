@@ -14,6 +14,11 @@ public class ModPlacedFeatures {
     public static final RegistryEntry<PlacedFeature> CORDIERITE_ORE_PLACED = PlacedFeatures.register("cordierite_ore_placed",
             ModConfiguredFeatures.CORDIERITE_ORE, modifiersWithCount(9,
                     HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80),YOffset.aboveBottom(80))));
+
+    public static final RegistryEntry<PlacedFeature> URANIUM_ORE_PLACED = PlacedFeatures.register("uranium_ore_placed",
+            ModConfiguredFeatures.URANIUM_ORE, modifiersWithCount(15,
+                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80),YOffset.aboveBottom(80))));
+
     private static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {
         return List.of(countModifier, SquarePlacementModifier.of(), heightModifier, BiomePlacementModifier.of());
     }
