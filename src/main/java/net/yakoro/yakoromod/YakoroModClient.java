@@ -19,10 +19,10 @@ public class YakoroModClient implements ClientModInitializer {
                 new SimpleFluidRenderHandler(
                         new Identifier("minecraft:block/water_still"),
                         new Identifier("minecraft:block/water_flow"),
-                        0xA1E038D0
+                        0xF3D05B
                 ));
 
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
+        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getSolid(),
                 ModFluids.STILL_BEER, ModFluids.FLOWING_BEER);
     }
 }

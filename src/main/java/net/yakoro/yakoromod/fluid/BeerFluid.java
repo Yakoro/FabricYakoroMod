@@ -95,6 +95,7 @@ public abstract class BeerFluid extends FlowableFluid {
             builder.add(LEVEL);
         }
 
+
         @Override
         public int getLevel(FluidState state) {
             return state.get(LEVEL);
