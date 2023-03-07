@@ -17,7 +17,7 @@ public class ModPlacedFeatures {
 
     public static final RegistryEntry<PlacedFeature> URANIUM_ORE_PLACED = PlacedFeatures.register("uranium_ore_placed",
             ModConfiguredFeatures.URANIUM_ORE, modifiersWithCount(15,
-                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80),YOffset.aboveBottom(80))));
+                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-50),YOffset.aboveBottom(150))));
 
     private static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {
         return List.of(countModifier, SquarePlacementModifier.of(), heightModifier, BiomePlacementModifier.of());
