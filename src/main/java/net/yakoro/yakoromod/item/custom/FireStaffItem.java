@@ -25,19 +25,22 @@ public class FireStaffItem extends Item {
 
 
         ItemStack itemStack = user.getStackInHand(hand);
-        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.BLOCK_BAMBOO_PLACE, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_PLAYER_HURT_ON_FIRE, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
 
 
 
         if (!world.isClient) {
             InvisibleProjectileEntity invisibleProjectileEntity = new InvisibleProjectileEntity(world, user);
-            invisibleProjectileEntity.setItem(ModItems.URANIUM_BALL.getDefaultStack());
-            invisibleProjectileEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0f, 5f, 0f);
+            invisibleProjectileEntity.setItem(ModItems.INVISIBLE_PROJECTILE.getDefaultStack());
+            invisibleProjectileEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0f, 20f, 0f);
             world.spawnEntity(invisibleProjectileEntity);
+            user.getItemCooldownManager().set(this, 10);
         }
         user.incrementStat(Stats.USED.getOrCreateStat(this));
 
 
         return TypedActionResult.success(itemStack, world.isClient());
     }
+
+
 }

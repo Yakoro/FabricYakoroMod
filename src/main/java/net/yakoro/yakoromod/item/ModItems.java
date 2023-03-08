@@ -54,6 +54,9 @@ public class ModItems {
     public static final Item FIRE_STAFF = registerItem("fire_staff",
             new FireStaffItem(new FabricItemSettings().group(ItemGroup.MISC).group(ModItemGroup.CORDIERITE)));
 
+    public static final Item INVISIBLE_PROJECTILE = registerItem("invisible_projectile",
+            new Item(new FabricItemSettings().group(ItemGroup.MISC).group(ModItemGroup.CORDIERITE)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(YakoroMod.MOD_ID, name), item);
     }

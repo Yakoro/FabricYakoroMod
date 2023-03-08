@@ -15,7 +15,7 @@ public class TotemOfGodItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 
         if (!user.world.isClient() && hand == Hand.MAIN_HAND) {
-            world.addParticle(ParticleTypes.CLOUD, user.getX(), user.getY(), user.getZ(), 1, 1, 1);
+            world.addParticle(ParticleTypes.BUBBLE, true, user.getX(), user.getY(), user.getZ(), 10, 10, 10);
 
             if (world.isNight()) {
                 MinecraftServer server = world.getServer();
