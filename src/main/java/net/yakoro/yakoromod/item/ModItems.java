@@ -9,6 +9,7 @@ import net.minecraft.util.registry.Registry;
 import net.yakoro.yakoromod.YakoroMod;
 import net.yakoro.yakoromod.block.ModBlocks;
 import net.yakoro.yakoromod.item.custom.ExplosiveGunItem;
+import net.yakoro.yakoromod.item.custom.GrabStaffItem;
 import net.yakoro.yakoromod.item.custom.TotemOfGodItem;
 import net.yakoro.yakoromod.item.toolmaterial.CordieriteToolMaterialPickaxe;
 import net.yakoro.yakoromod.item.toolmaterial.CordieriteToolMaterialSword;
@@ -49,6 +50,9 @@ public class ModItems {
 
     public static final Item TOTEM_OF_GOD = registerItem("totem_of_god",
             new TotemOfGodItem(new FabricItemSettings().group(ItemGroup.MISC).group(ModItemGroup.CORDIERITE)));
+
+    public static final Item GRAB_STAFF = registerItem("grab_staff",
+            new GrabStaffItem(new FabricItemSettings().group(ItemGroup.MISC).group(ModItemGroup.CORDIERITE)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(YakoroMod.MOD_ID, name), item);

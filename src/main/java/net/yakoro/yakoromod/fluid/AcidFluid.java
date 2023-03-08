@@ -34,9 +34,7 @@ public abstract class AcidFluid extends FlowableFluid {
     }
 
     @Override
-    protected int getLevelDecreasePerBlock(WorldView world) {
-        return 1;
-    }
+    protected int getLevelDecreasePerBlock(WorldView world) { return 1; }
 
     @Override
     public boolean matchesType(Fluid fluid) {

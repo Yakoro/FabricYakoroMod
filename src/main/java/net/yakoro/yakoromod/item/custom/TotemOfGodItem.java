@@ -20,6 +20,7 @@ public class TotemOfGodItem extends Item {
                     long timeOfDay = 6000; // midi
                     server.getCommandManager().execute(server.getCommandSource().withSilent().withLevel(2),
                             "time set " + timeOfDay);
+                    user.getItemCooldownManager().set(this, 10000);
                 }
             } else {
                 MinecraftServer server = world.getServer();
@@ -27,6 +28,7 @@ public class TotemOfGodItem extends Item {
                     long timeOfDay = 13000; // minuit
                     server.getCommandManager().execute(server.getCommandSource().withSilent().withLevel(2),
                             "time set " + timeOfDay);
+                    user.getItemCooldownManager().set(this, 10000);
                 }
             }
 

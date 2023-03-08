@@ -29,9 +29,7 @@ public abstract class BeerFluid extends FlowableFluid {
     }
 
     @Override
-    protected int getFlowSpeed(WorldView world) {
-        return 6;
-    }
+    protected int getFlowSpeed(WorldView world) { return 1; }
 
     @Override
     protected int getLevelDecreasePerBlock(WorldView world) {
