@@ -32,8 +32,9 @@ public class InvisibleProjectileEntity extends ThrownItemEntity {
     protected void onEntityHit(EntityHitResult entityHitResult) {
         super.onEntityHit(entityHitResult);
         Entity entity = entityHitResult.getEntity();
-        entity.kill();
-        //entity.setOnFire(true);
+        //entity.kill();
+        //entity.setGlowing(true);
+        entity.setOnFireFromLava();
         //entity.setPosition();
         //entityHitResult.getEntity().
 

@@ -3,6 +3,7 @@ package net.yakoro.yakoromod.item.custom;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -14,6 +15,8 @@ public class TotemOfGodItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 
         if (!user.world.isClient() && hand == Hand.MAIN_HAND) {
+            world.addParticle(ParticleTypes.CLOUD, user.getX(), user.getY(), user.getZ(), 1, 1, 1);
+
             if (world.isNight()) {
                 MinecraftServer server = world.getServer();
                 if (server != null) {
