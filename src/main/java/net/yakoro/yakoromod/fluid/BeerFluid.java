@@ -43,7 +43,7 @@ public abstract class BeerFluid extends FlowableFluid {
                 double d = (double)pos.getX() + random.nextDouble();
                 double e = (double)pos.getY() + 1.0;
                 double f = (double)pos.getZ() + random.nextDouble();
-                world.addParticle(ParticleTypes.CLOUD, d, e, f, 0.0, 0.0, 0.0);
+                world.addParticle(ParticleTypes.CLOUD, d, e, f, 0.0, -0.1, 0.0);
                 world.playSound(d, e, f, SoundEvents.AMBIENT_UNDERWATER_EXIT, SoundCategory.BLOCKS, 0.2f + random.nextFloat() * 0.2f, 0.9f + random.nextFloat() * 0.15f, false);
             }
             if (random.nextInt(200) == 0) {

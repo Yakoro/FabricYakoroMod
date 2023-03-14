@@ -2,8 +2,6 @@
   "replace": false,
   "values": [
     "yakoromod:beer",
-    "yakoromod:flowing_beer",
-    "yakoromod:acid",
-    "yakoromod:flowing_acid"
+    "yakoromod:flowing_beer"
   ]
 }
